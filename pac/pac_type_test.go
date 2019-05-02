@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"gopkg.in/jcmturner/gokrb5.v7/keytab"
-	"gopkg.in/jcmturner/gokrb5.v7/test/testdata"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
+	"github.com/minio/gokrb5/keytab"
+	"github.com/minio/gokrb5/test/testdata"
+	"github.com/minio/gokrb5/types"
 )
 
 func TestPACTypeVerify(t *testing.T) {

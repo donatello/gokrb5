@@ -3,10 +3,10 @@ package client
 import (
 	"encoding/hex"
 	"github.com/stretchr/testify/assert"
-	"gopkg.in/jcmturner/gokrb5.v7/config"
-	"gopkg.in/jcmturner/gokrb5.v7/keytab"
-	"gopkg.in/jcmturner/gokrb5.v7/test"
-	"gopkg.in/jcmturner/gokrb5.v7/test/testdata"
+	"github.com/minio/gokrb5/config"
+	"github.com/minio/gokrb5/keytab"
+	"github.com/minio/gokrb5/test"
+	"github.com/minio/gokrb5/test/testdata"
 	"testing"
 )
 

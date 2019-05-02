@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"gopkg.in/jcmturner/gokrb5.v7/client"
-	"gopkg.in/jcmturner/gokrb5.v7/config"
-	"gopkg.in/jcmturner/gokrb5.v7/keytab"
-	"gopkg.in/jcmturner/gokrb5.v7/test/testdata"
+	"github.com/minio/gokrb5/client"
+	"github.com/minio/gokrb5/config"
+	"github.com/minio/gokrb5/keytab"
+	"github.com/minio/gokrb5/test/testdata"
 )
 
 const (

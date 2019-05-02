@@ -6,9 +6,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/adtype"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/nametype"
-	"gopkg.in/jcmturner/gokrb5.v7/test/testdata"
+	"github.com/minio/gokrb5/iana/adtype"
+	"github.com/minio/gokrb5/iana/nametype"
+	"github.com/minio/gokrb5/test/testdata"
 )
 
 func TestUnmarshalAuthorizationData(t *testing.T) {

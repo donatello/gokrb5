@@ -9,8 +9,8 @@ import (
 	"net"
 	"time"
 
-	"gopkg.in/jcmturner/gokrb5.v7/iana/errorcode"
-	"gopkg.in/jcmturner/gokrb5.v7/messages"
+	"github.com/minio/gokrb5/iana/errorcode"
+	"github.com/minio/gokrb5/messages"
 )
 
 // SendToKDC performs network actions to send data to the KDC.

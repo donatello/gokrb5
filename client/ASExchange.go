@@ -1,14 +1,14 @@
 package client
 
 import (
-	"gopkg.in/jcmturner/gokrb5.v7/crypto"
-	"gopkg.in/jcmturner/gokrb5.v7/crypto/etype"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/errorcode"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/keyusage"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/patype"
-	"gopkg.in/jcmturner/gokrb5.v7/krberror"
-	"gopkg.in/jcmturner/gokrb5.v7/messages"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
+	"github.com/minio/gokrb5/crypto"
+	"github.com/minio/gokrb5/crypto/etype"
+	"github.com/minio/gokrb5/iana/errorcode"
+	"github.com/minio/gokrb5/iana/keyusage"
+	"github.com/minio/gokrb5/iana/patype"
+	"github.com/minio/gokrb5/krberror"
+	"github.com/minio/gokrb5/messages"
+	"github.com/minio/gokrb5/types"
 )
 
 // ASExchange performs an AS exchange for the client to retrieve a TGT.
