@@ -1,3 +1,5 @@
+> NOTE: This is a fork of the upstream project https://github.com/jcmturner/gokrb5
+
 # gokrb5
 [![Version](https://img.shields.io/github/release/jcmturner/gokrb5.svg)](https://github.com/jcmturner/gokrb5/releases)
 
@@ -21,7 +23,7 @@ import "gopkg.in/jcmturner/gokrb5.v7/<sub package>"
 ```
 
 ## Features
-* **Pure Go** - no dependency on external libraries 
+* **Pure Go** - no dependency on external libraries
 * No platform specific code
 * Server Side
   * HTTP handler wrapper implements SPNEGO Kerberos authentication
@@ -115,10 +117,10 @@ cl := client.NewClientWithPassword("username", "REALM.COM", "password", cfg, cli
 #### Authenticate to a Service
 
 ##### HTTP SPNEGO
-Create the HTTP request object and then create an SPNEGO client and use this to process the request with methods that 
+Create the HTTP request object and then create an SPNEGO client and use this to process the request with methods that
 are the same as on a HTTP client.
 If nil is passed as the HTTP client when creating the SPNEGO client the http.DefaultClient is used.
-When creating the SPNEGO client pass the Service Principal Name (SPN) or auto generate the SPN from the request 
+When creating the SPNEGO client pass the Service Principal Name (SPN) or auto generate the SPN from the request
 object by passing a null string "".
 ```go
 r, _ := http.NewRequest("GET", "http://host.test.gokrb5/index.html", nil)
@@ -162,7 +164,7 @@ APReq, err := messages.NewAPReq(tkt, key, auth)
 Now send the AP_REQ to the service. How this is done will be specific to the application use case.
 
 #### Changing a Client Password
-This feature uses the Microsoft Kerberos Password Change protocol (RFC 3244). 
+This feature uses the Microsoft Kerberos Password Change protocol (RFC 3244).
 This is implemented in Microsoft Active Directory and in MIT krb5kdc as of version 1.7.
 Typically the kpasswd server listens on port 464.
 
@@ -218,10 +220,10 @@ Configure the HTTP handler:
 ```go
 http.Handler("/", spnego.SPNEGOKRB5Authenticate(h, &kt, service.Logger(l)))
 ```
-The handler to be wrapped and the keytab are required arguments. 
+The handler to be wrapped and the keytab are required arguments.
 Additional optional settings can be provided, such as the logger shown above.
 
-Another example of optional settings may be that when using Active Directory where the SPN is mapped to a user account 
+Another example of optional settings may be that when using Active Directory where the SPN is mapped to a user account
 the keytab may contain an entry for this user account. In this case this should be specified as below with the ``KeytabPrincipal``:
 ```go
 http.Handler("/", spnego.SPNEGOKRB5Authenticate(h, &kt, service.Logger(l), service.KeytabPrincipal(pn)))
@@ -241,7 +243,7 @@ if validuser, ok := ctx.Value(spnego.CTXKeyAuthenticated).(bool); ok && validuse
                         // Now access the fields of the ADCredentials struct. For example:
                         groupSids := ADCreds.GroupMembershipSIDs
                 }
-        } 
+        }
 
 }
 ```
@@ -285,7 +287,7 @@ if ok, creds, err := service.VerifyAPREQ(APReq, s); ok {
 * Greg Hudson from the MIT Consortium for Kerberos and Internet Trust for providing useful advice.
 
 ## Contributing
-Thank you for your interest in contributing to gokrb5 please read the 
+Thank you for your interest in contributing to gokrb5 please read the
 [contribution guide](https://github.com/jcmturner/gokrb5/blob/master/CONTRIBUTING.md) as it should help you get started.
 
 ## Known Issues
